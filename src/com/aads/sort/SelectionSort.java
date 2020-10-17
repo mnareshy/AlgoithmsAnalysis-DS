@@ -107,9 +107,9 @@ public class SelectionSort {
 		System.out.println("\n");
 		int sArray1[] = {7, 8 , 1, 4, 2, 12};
 
-		sSortInst.sSortInPlace(sArray1, sArray.length);
+		sSortInst.sSortInPlace(sArray1, sArray1.length);
 
-		for (int i = 0; i < sArray.length; i++) {
+		for (int i = 0; i < sArray1.length; i++) {
 
 			System.out.print(sArray1[i] + "\t");
 		}
