@@ -17,6 +17,7 @@ public class SumOfElements {
     }
 
 
+
     public static void main(String[] args) {
 
         System.out.println(sumEle(12) +" "+x);
