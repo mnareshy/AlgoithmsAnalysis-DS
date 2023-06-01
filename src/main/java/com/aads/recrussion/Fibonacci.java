@@ -41,11 +41,9 @@ public class Fibonacci {
         Arrays.fill(fArray, -1);
     }
 
-
     static int fibRecurssiveOpt(int n) {
 
        // Arrays.fill(fArray, -1);
-
         if (n <= 1) {
             fArray[n] = n;
             return n;
@@ -57,6 +55,7 @@ public class Fibonacci {
             if (fArray[n - 1] == -1)
                 fArray[n - 1] = fibRecurssiveOpt(n - 1);
             //    System.out.println(Arrays.toString(fArray));
+
             return fArray[n - 2] + fArray[n - 1];
         }
 
@@ -66,9 +65,9 @@ public class Fibonacci {
 
     public static void main(String[] args) {
 
-        System.out.println(fib(3));
-        System.out.println(fibRecurssive(3));
-        System.out.println(fibRecurssiveOpt(3));
+        System.out.println(fib(8));
+        System.out.println(fibRecurssive(8) );
+        System.out.println(fibRecurssiveOpt(8) );
 
     }
 }
