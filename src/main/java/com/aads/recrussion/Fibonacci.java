@@ -68,6 +68,7 @@ public class Fibonacci {
         System.out.println(fib(8));
         System.out.println(fibRecurssive(8) );
         System.out.println(fibRecurssiveOpt(8) );
+        System.out.println(2048/10);
 
     }
 }
