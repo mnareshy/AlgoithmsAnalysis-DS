@@ -1,5 +1,7 @@
 package com.aads.array_atd;
 
+import java.util.Arrays;
+
 public class MissingElementsInArray {
 
     void findSingleMissingElementinSortedArray(int[] sortedArray) {
@@ -45,6 +47,34 @@ public class MissingElementsInArray {
         }
     }
 
+    void findMultipleMissingElementsinUnSortedArrayUsingHashing(int[] inArray, int high, int lo) {
+
+        int[] hashArray = new int[high+1];
+
+        int temp = 0;
+
+        for (int i = 0; i < inArray.length; i++) {
+
+            temp = inArray[i];
+            hashArray[temp]++;
+/*
+            System.out.println(Arrays.toString(hashArray));
+*/
+
+        }
+
+        for (int i = lo; i < high; i++) {
+
+            if(hashArray[i] == 0)
+                System.out.print(i + " ");
+
+        }
+
+
+    }
+
+
+
 
     public static void main(String[] args) {
 
@@ -56,6 +86,10 @@ public class MissingElementsInArray {
 
         int[] sortedArray2 = {6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 20};
         missingElementsInArray.findMultipleMissingElementsinSortedArray(sortedArray2);
+
+
+        int[] inArray = {2, 8, 7, 10, 8, 6, 14, 16, 15, 20, 17};
+        missingElementsInArray.findMultipleMissingElementsinUnSortedArrayUsingHashing(inArray, 20, 2);
 
 
     }
