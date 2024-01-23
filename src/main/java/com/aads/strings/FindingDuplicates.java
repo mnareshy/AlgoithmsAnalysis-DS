@@ -44,14 +44,46 @@ public class FindingDuplicates {
         //System.out.println(Arrays.toString(hasing));
     }
 
+
+    public void findingUsingBits(char[] inArray){
+
+        int hashbits = 0;
+        int comparebits = 0;
+
+        int lenght = inArray.length;
+
+        for (int i = 0; i < lenght; i++) {
+
+            comparebits = 1;
+            comparebits =  (comparebits << (inArray[i] - 97));
+
+            if((comparebits & hashbits) > 0)
+                System.out.println("Dupicates "+ inArray[i]);
+
+            else
+                hashbits =  (hashbits | comparebits);
+
+            //System.out.println(Integer.toBinaryString(hashbits));
+
+        }
+
+    }
+
+
+
     public static void main(String[] args) {
 
         FindingDuplicates findingDuplicates = new FindingDuplicates();
 
         char[] inArray = {'f', 'i', 'n', 'd', 'i', 'n', 'g'};
 
+
         findingDuplicates.findUsingLoops(inArray);
         findingDuplicates.findUsingHasing(inArray);
+
+      //  inArray = new char[]{'f', 'i', 'n', 'd', 'i', 'n', 'g', 'f', 'f', 'S', 'S'};
+        findingDuplicates.findingUsingBits(inArray);
+     //   findingDuplicates.findingUsingBitsRemove(inArray);
 
     }
 
